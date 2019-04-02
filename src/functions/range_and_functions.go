@@ -2,56 +2,62 @@ package main
 
 import "fmt"
 
-func add (a int , b int) int {
-    return a+b
+func add(a int, b int) int {
+	return a + b
 }
 
+// Variable Scopes
+var x = 4
+
+func f() {
+	fmt.Printf(" value of x is %d", x)
+}
 
 func sums(nums ...int) {
-//varaidic functions
-    fmt.Print(nums, " ")
-    total := 0
-    for _, num := range nums {
-        total += num
-    }
-    fmt.Println(total)
+	//varaidic functions
+	fmt.Print(nums, " ")
+	total := 0
+	for _, num := range nums {
+		total += num
+	}
+	fmt.Println(total)
 }
 
-func main(){
- //range: iterator for variety fo data structs
-    nums := []int{1,2,3}
+func main() {
+	//range: iterator for variety fo data structs
+	nums := []int{1, 2, 3}
 
-    sum:=0
+	sum := 0
 
-    for temp ,num := range nums {
-        fmt.Println(temp)
-        sum+= num
-    }
+	for temp, num := range nums {
+		fmt.Println(temp)
+		sum += num
+	}
 
-    fmt.Println(sum)
+	fmt.Println(sum)
 
-    //iterating over a map
-    kvs := map[string]string{"a": "apple", "b": "banana"}
-    for k, v := range kvs {
-        fmt.Printf("%s -> %s\n", k, v)
-    }
+	//iterating over a map
+	kvs := map[string]string{"a": "apple", "b": "banana"}
+	for k, v := range kvs {
+		fmt.Printf("%s -> %s\n", k, v)
+	}
 
-    //iterating over just keys
-    for k := range kvs {
-        fmt.Println("key:", k)
-    }
+	//iterating over just keys
+	for k := range kvs {
+		fmt.Println("key:", k)
+	}
 
-    for i, c := range "go" {
-        fmt.Println(i, c)
-    }
+	for i, c := range "go" {
+		fmt.Println(i, c)
+	}
 
-    fmt.Println(add(5,5))
-    sums(1, 2)
-    sums(1, 2, 3)
+	fmt.Println(add(5, 5))
+	sums(1, 2)
+	sums(1, 2, 3)
 
-    temp := []int{1,2,3,4,5}
-    sums(temp...)
+	temp := []int{1, 2, 3, 4, 5}
+	sums(temp...)
 
+	f()
 
 }
-
