@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	/* This is a multiline comment */
+	/* This is a multiline comment
+	   Woohoo*/
 
 	fmt.Println(("hello world"))
 	var a = 20
