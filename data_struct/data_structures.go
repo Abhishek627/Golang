@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-func data_struct() {
+func dataStruct() {
 	//slices : like python list slicing
 
 	letters := []string{"a", "b", "c"}
@@ -34,8 +34,8 @@ func data_struct() {
 	delete(m, "k2")
 	fmt.Println(m)
 
-	_, k2_present := m["k2"]
-	_, k1_present := m["k1"]
-	fmt.Println("k1 and k2 are present or not ? ", k1_present, k2_present)
+	_, k2Present := m["k2"]
+	_, k1Present := m["k1"]
+	fmt.Println("k1 and k2 are present or not ? ", k1Present, k2Present)
 
 }
