@@ -1,9 +1,9 @@
-package main
+package dataStruct
 
 import "fmt"
 
-
-func main() {
+func Map() {
+	fmt.Println(" ***************** STARTING MAPS DEMO NOW  *****************")
 	// How to create a map and use it. Map is like dict in python
 
 	//M1
@@ -17,7 +17,7 @@ func main() {
 	fmt.Println(map1) // map[Hello:1 Hi:2]
 	fmt.Println(m2)
 
-	for k,v := range map1 {
+	for k, v := range map1 {
 		println(k, v)
 	}
 
@@ -25,4 +25,7 @@ func main() {
 
 	id, p := map1["Hello"]
 	print(id, p) // 0, false because we deleted hello from the map
+
+	fmt.Println("\n ***************** ENDING MAPS DEMO NOW  *****************\n")
+
 }

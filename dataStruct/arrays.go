@@ -1,8 +1,9 @@
-package main
+package dataStruct
 
 import "fmt"
 
-func main() {
+func ArrayDemo() {
+	fmt.Println("\n ***************** STARTING ARRAY DEMO NOW  *****************\n")
 	// Defining arrays in GO
 
 	var arr1 = [5]int{1, 2, 3, 4, 5}
@@ -19,4 +20,7 @@ func main() {
 		fmt.Printf("idx: %d, val: %d \n", idx, val)
 
 	}
+
+	fmt.Println(" \n ***************** ENDING ARRAYS DEMO NOW  *****************\n")
+
 }

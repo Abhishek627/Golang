@@ -3,9 +3,11 @@ package main
 import (
 	"fmt"
 	"reflect"
+
+	ds "github.com/Abhishek627/Golang/dataStruct"
 )
 
-func dataStruct() {
+func main() {
 	//slices : like python list slicing
 
 	letters := []string{"a", "b", "c"}
@@ -38,4 +40,7 @@ func dataStruct() {
 	_, k1Present := m["k1"]
 	fmt.Println("k1 and k2 are present or not ? ", k1Present, k2Present)
 
+	ds.Slices()
+	ds.ArrayDemo()
+	ds.Map()
 }

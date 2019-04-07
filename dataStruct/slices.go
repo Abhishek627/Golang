@@ -1,11 +1,13 @@
-package main
+package dataStruct
 
 import (
 	"fmt"
 	"reflect"
 )
 
-func main() {
+func Slices() {
+	fmt.Println(" \n***************** STARTING SLICES DEMO NOW  *****************\n")
+
 	// Slices are basically dynamic array implementation. In Go, we use slices more than arrays.
 	// REMEMBER: slices points to same copy as array . So changes in slices are reflected in array
 
@@ -47,4 +49,7 @@ func main() {
 	p := []string{"Hello", "Abhishek"}
 	p = append(p, "Sharma")
 	fmt.Print(p) // [Hello Abhishek Sharma]
+
+	fmt.Println("\n ***************** ENDING SLICES DEMO NOW  *****************\n")
+
 }
