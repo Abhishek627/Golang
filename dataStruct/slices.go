@@ -1,16 +1,14 @@
-package dataStruct
+package datastruct
 
 import (
 	"fmt"
 	"reflect"
 )
-
+// Slices :Defines how to declare and use slices
 func Slices() {
-	fmt.Println(" \n***************** STARTING SLICES DEMO NOW  *****************\n")
-
 	// Slices are basically dynamic array implementation. In Go, we use slices more than arrays.
 	// REMEMBER: slices points to same copy as array . So changes in slices are reflected in array
-
+	fmt.Println(" \n***************** STARTING SLICES DEMO NOW  *****************")
 	array1 := [6]int{2, 3, 4, 5, 67, 11}
 	fmt.Println(array1, reflect.TypeOf(array1)) // [2 3 4 5 67 11] [6]int
 
@@ -50,6 +48,6 @@ func Slices() {
 	p = append(p, "Sharma")
 	fmt.Print(p) // [Hello Abhishek Sharma]
 
-	fmt.Println("\n ***************** ENDING SLICES DEMO NOW  *****************\n")
+fmt.Println("\n ***************** ENDING SLICES DEMO NOW  *****************")
 
 }

@@ -1,11 +1,10 @@
-package dataStruct
+package datastruct
 
 import "fmt"
 
+// ArrayDemo :Starting array demo now
 func ArrayDemo() {
-	fmt.Println("\n ***************** STARTING ARRAY DEMO NOW  *****************\n")
-	// Defining arrays in GO
-
+	fmt.Println("\n ***************** STARTING ARRAY DEMO NOW  *****************")
 	var arr1 = [5]int{1, 2, 3, 4, 5}
 
 	arr2 := [...]int{1, 2, 3, 4, 5}
@@ -20,7 +19,6 @@ func ArrayDemo() {
 		fmt.Printf("idx: %d, val: %d \n", idx, val)
 
 	}
-
-	fmt.Println(" \n ***************** ENDING ARRAYS DEMO NOW  *****************\n")
+	fmt.Println(" \n ***************** ENDING ARRAYS DEMO NOW  *****************")
 
 }

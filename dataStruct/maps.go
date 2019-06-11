@@ -1,10 +1,11 @@
-package dataStruct
+package datastruct
 
 import "fmt"
 
+//Map :How to create a map and use it. Map is like dict in python
 func Map() {
-	fmt.Println(" ***************** STARTING MAPS DEMO NOW  *****************")
 	// How to create a map and use it. Map is like dict in python
+	fmt.Println(" ***************** STARTING MAPS DEMO NOW  *****************")
 
 	//M1
 	var map1 = make(map[string]int)
@@ -26,6 +27,6 @@ func Map() {
 	id, p := map1["Hello"]
 	print(id, p) // 0, false because we deleted hello from the map
 
-	fmt.Println("\n ***************** ENDING MAPS DEMO NOW  *****************\n")
+	fmt.Println("\n ***************** ENDING MAPS DEMO NOW  *****************")
 
 }
