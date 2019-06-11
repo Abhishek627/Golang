@@ -52,7 +52,8 @@ func main() {
 
 	// Pointers
 
-	var x int = 1
+	//Removing int from left side as it'll be inferred from right side
+	var x = 1
 	var ip *int // ip is pointer to int
 	ip = &x     // ip now points to x
 	fmt.Print(ip)
