@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"reflect"
 )
+
 // Slices :Defines how to declare and use slices
 func Slices() {
 	// Slices are basically dynamic array implementation. In Go, we use slices more than arrays.
@@ -48,6 +49,6 @@ func Slices() {
 	p = append(p, "Sharma")
 	fmt.Print(p) // [Hello Abhishek Sharma]
 
-fmt.Println("\n ***************** ENDING SLICES DEMO NOW  *****************")
+	fmt.Println("\n ***************** ENDING SLICES DEMO NOW  *****************")
 
 }

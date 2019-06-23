@@ -6,22 +6,22 @@ import (
 )
 
 type Employee struct {
-	Name string `json:name`
-	Salary int `json:salary`
+	Name   string `json:name`
+	Salary int    `json:salary`
 }
 
-func MustMarshal(data interface{}) []byte{
-	out,err:= json.Marshal(data)
+func MustMarshal(data interface{}) []byte {
+	out, err := json.Marshal(data)
 	if err != nil {
 		panic(err)
 	}
 	return out
 }
 
-func main(){
+func main() {
 
 	var emp Employee
-	data := []byte (`
+	data := []byte(`
 		{
 			"name":"Abhishek Sharma",
 			"salary":10000
@@ -29,12 +29,12 @@ func main(){
 		`)
 
 	err := json.Unmarshal(data, &emp)
-	if err == nil{
+	if err == nil {
 		fmt.Print(emp.Name)
 	}
 
-	mapD := map[string]int{"nameid":1, "salary": 7}
-    mapB:= MustMarshal(mapD)
-    fmt.Println(string(mapB))
+	mapD := map[string]int{"nameid": 1, "salary": 7}
+	mapB := MustMarshal(mapD)
+	fmt.Println(string(mapB))
 
 }

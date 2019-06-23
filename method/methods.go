@@ -1,4 +1,4 @@
-package main	
+package main
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ type circle struct {
 }
 
 type rectangle struct {
-	length , breath float32
+	length, breath float32
 }
 
 // This is a method with receiver type circle struct. This receives a copy of the struct, can't modify the struct directy
@@ -23,11 +23,12 @@ func (c circle) Area() float32 {
 func (r rectangle) Area() float32 {
 	return r.length * r.breath
 }
+
 /***************************************************************************************/
 
 // To modify the value of struct we can pass a pointer to struct as type
 func (c *circle) changeRadius(newrad float32) {
-	c.radius= newrad
+	c.radius = newrad
 }
 
 /***************************************************************************************/
@@ -39,23 +40,22 @@ func (m mystring) toUpperCase() string {
 	return strings.ToUpper(s)
 }
 
-
 /***************************************************************************************/
 
-func main(){
+func main() {
 	c := circle{2.0}
-	r := rectangle{2.0,3.0}
+	r := rectangle{2.0, 3.0}
 	fmt.Println("area of circle c is ", c.Area())
 	fmt.Println("area of rectangle r is ", r.Area())
 
 	// Verifying whether modifying the value works
-	(&c).changeRadius(4.0)  // c.changeRadius() also works. Thank you golang
+	(&c).changeRadius(4.0) // c.changeRadius() also works. Thank you golang
 	fmt.Println("area of circle c is ", c.Area())
 
-	/* 
-	Good points to know:
-	1. Promoted fields work in methods
-	2. If nested struct has a method implemented, then methods is also promoted to outer level (so cool)
+	/*
+		Good points to know:
+		1. Promoted fields work in methods
+		2. If nested struct has a method implemented, then methods is also promoted to outer level (so cool)
 
 	*/
 
@@ -65,7 +65,7 @@ func main(){
 	str := mystring("abhishek")
 	fmt.Println(str.toUpperCase())
 
-	/* OUTPUT: 
+	/* OUTPUT:
 	area of circle c is  12.566371
 	area of rectangle r is  6
 	area of circle c is  50.265484

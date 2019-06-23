@@ -45,8 +45,7 @@ func main() {
 	ds.Slices()
 	ds.ArrayDemo()
 	ds.Map()
-	
-	httproute.ServerHTTP()
 
+	httproute.ServerHTTP()
 
 }
